@@ -3,145 +3,86 @@ const products = document.querySelector('#products');
 
 const phones = [
     {
-        brand: 'Samsung',
         img: './assets/ph.png',
-        model: 'S20',
+        name: 'Samsung S20',
         ram: 8,
         rom: 256,
-        camera: '20 megapixel'
+        camera: '20 megapixel',
+        quantity: 1,
+        price: 25000
     },
     {
-        brand: 'Xiomi',
         img: './assets/ph.png',
-        model: 'note10',
+        name: 'Xiomi Note10',
         ram: 4,
         rom: 64,
-        camera: '10 megapixel'
+        camera: '10 megapixel',
+        quantity: 1,
+        price: 22000
     },
     {
-        brand: 'Infinix',
         img: './assets/ph.png',
-        model: 'z10',
-        ram: 2,
-        rom: 16,
-        camera: '5 megapixel'
-    },
-    {
-        brand: 'Tecno',
-        img: './assets/ph.png',
-        model: 'spark10',
+        name: 'Tecno Spark10',
         ram: 12,
         rom: 512,
-        camera: '25 megapixel'
+        camera: '25 megapixel',
+        quantity: 1,
+        price: 15000
     },
     {
-        brand: 'Iphone',
         img: './assets/ph.png',
-        model: '14',
-        ram: 4,
-        rom: 1024,
-        camera: '30 megapixel'
-    },
-    {
-        brand: 'Oppo',
-        img: './assets/ph.png',
-        model: 'F11',
+        name: 'Oppo F11',
         ram: 8,
         rom: 256,
-        camera: '20 megapixel'
+        camera: '20 megapixel',
+        quantity: 1,
+        price: 19000
     },
     {
-        brand: 'Vivo',
         img: './assets/ph.png',
-        model: 'y20',
+        name: 'Vivo Y20',
         ram: 4,
         rom: 64,
-        camera: '8 megapixel'
-    },
-    {
-        brand: 'Xiomi',
-        img: './assets/ph.png',
-        model: 'note10',
-        ram: 4,
-        rom: 64,
-        camera: '10 megapixel'
-    },
-    {
-        brand: 'Infinix',
-        img: './assets/ph.png',
-        model: 'z10',
-        ram: 2,
-        rom: 16,
-        camera: '5 megapixel'
-    },
-    {
-        brand: 'Xiomi',
-        img: './assets/ph.png',
-        model: 'note10',
-        ram: 4,
-        rom: 64,
-        camera: '10 megapixel'
-    },
-    {
-        brand: 'Infinix',
-        img: './assets/ph.png',
-        model: 'z10',
-        ram: 2,
-        rom: 16,
-        camera: '5 megapixel'
-    },
-    {
-        brand: 'Xiomi',
-        img: './assets/ph.png',
-        model: 'note10',
-        ram: 4,
-        rom: 64,
-        camera: '10 megapixel'
-    },
-    {
-        brand: 'Infinix',
-        img: './assets/ph.png',
-        model: 'z10',
-        ram: 2,
-        rom: 16,
-        camera: '5 megapixel'
-    },
-    {
-        brand: 'Xiomi',
-        img: './assets/ph.png',
-        model: 'note10',
-        ram: 4,
-        rom: 64,
-        camera: '10 megapixel'
-    },
-    {
-        brand: 'Infinix',
-        img: './assets/ph.png',
-        model: 'z10',
-        ram: 2,
-        rom: 16,
-        camera: '5 megapixel'
-    },
-
+        camera: '8 megapixel',
+        quantity: 1,
+        price: 35000
+    }
 ]
 
 
 for (let i = 0; i < phones.length; i++) {
+
     products.innerHTML +=
         (`
     <div id = "card">
         <img src="${phones[i].img}" alt="${phones[i].brand} ${phones[i].model}" width="156px" height="202px">
-        <h4> Brand: ${phones[i].brand} </h4>
-        <p> Model: ${phones[i].model} </p>
+        <h4> ${phones[i].name} </h4>
         <p> RAM: ${phones[i].ram}GB </p>
         <p> ROM: ${phones[i].rom}GB </p>
-        <button>Add To Cart &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
-
-
+        <button onclick="addToCart(${i})">Add To Cart &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
     </div>
     `)
 }
 
+
+
+const cartItems = [];
+
+function addToCart(index) {
+
+
+    if (cartItems.includes(phones[index])) {
+        console.log("Pehly Se Hey Ga");
+        phones[index].quantity += 1;
+        // cartItems[index].price = (phones[index].price) * cartItems[index].quantity;
+    }
+    else {
+        console.log("Nahi hey");
+        cartItems.push(phones[index]);
+    }
+
+    console.log(cartItems);
+}
 
 
 

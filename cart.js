@@ -16,22 +16,46 @@ function renderCart() {
 
         cart.innerHTML +=
             (`
-        <div id = "card">
-            <img src="${cartItems[i].img}" alt="${cartItems[i].brand} ${cartItems[i].model}" width="156px" height="202px">
-            <h4> ${cartItems[i].name} </h4>
-            <p> RAM: ${cartItems[i].ram}GB </p>
-            <p> ROM: ${cartItems[i].rom}GB </p>
-            <button class="pd-btn" onclick="addToCart(${i})">Add To Cart &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
-        </div>
-        `)
-    }
-
+            <div id="cart-item"> 
+                <h4> ${cartItems[i].name} </h4>
+                <p> Quantity: ${cartItems[i].quantity} </p>
+                <p> Price: ${cartItems[i].price}</p>
+                <p> Total Price: ${cartItems[i].price * cartItems[i].quantity}</p>
+                <button class="qt-btn" onclick="increaseQuantity(${i})"> + </button>
+                <span> ${cartItems[i].quantity} </span>
+                <button class="qt-btn" onclick="decreaseQuantity(${i})"> - </button>
+                <button class="qt-btn" onclick="deleteitem(${i})"> Delete </button>
+            </div>
+            `)
+            
+        }
 }
 
 renderCart()
 
 
+function increaseQuantity(index) {
+    cartItems[index].quantity += 1;
 
+    cart.innerHTML = ''
+    renderCart()
+}
+
+
+function decreaseQuantity(index) {
+    cartItems[index].quantity -= 1;
+
+    cart.innerHTML = ''
+    renderCart()
+}
+
+
+function deleteitem(index) {
+    cartItems.splice(index, 1);
+
+    cart.innerHTML = ''
+    renderCart()
+}
 
 
 

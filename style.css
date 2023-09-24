@@ -18,6 +18,10 @@ body{
     justify-content: center;
 }
 
+.justify-between{
+    justify-content: space-between;
+}
+
 .text-centre{
     text-align: center;
 }
@@ -64,7 +68,21 @@ p{
     border-radius: 20px;
 }
 
-button{
+.btn{
+    padding: 15px 20px;
+    color: #ffff;
+    cursor: pointer;
+    border: 1px solid #0084ff;
+    background-color: #0084ff;
+    transition: all ease 800ms;
+}
+.btn:hover{
+    color: #0084ff;
+    border: 1px solid #0084ff;
+    background-color: transparent;
+}
+
+.pd-btn{
     color: #0084ff;
     margin-top: 10px;
     cursor: pointer;
@@ -72,7 +90,7 @@ button{
     background-color: transparent;
     transition: all ease 800ms;
 }
-button:hover{
+.pd-btn:hover{
     padding-left: 15px;
 }
 

@@ -59,7 +59,7 @@ for (let i = 0; i < phones.length; i++) {
         <h4> ${phones[i].name} </h4>
         <p> RAM: ${phones[i].ram}GB </p>
         <p> ROM: ${phones[i].rom}GB </p>
-        <button onclick="addToCart(${i})">Add To Cart &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+        <button class="pd-btn" onclick="addToCart(${i})">Add To Cart &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
     </div>
     `)
 }
@@ -72,20 +72,45 @@ function addToCart(index) {
 
 
     if (cartItems.includes(phones[index])) {
-        console.log("Pehly Se Hey Ga");
-        phones[index].quantity += 1;
-        // cartItems[index].price = (phones[index].price) * cartItems[index].quantity;
+
+        for (let i = 0; i < cartItems.length; i++) {
+            if (cartItems[i] === phones[index]) {
+                console.log("Phly se hey ga");
+                cartItems[i].quantity += 1;
+            }
+        }
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Item Quantity Added',
+            showConfirmButton: false,
+            timer: 1500
+          })
+
     }
     else {
         console.log("Nahi hey");
         cartItems.push(phones[index]);
+
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Item Added To Cart',
+            showConfirmButton: false,
+            timer: 1500
+          })
     }
 
     console.log(cartItems);
 }
 
 
+function goToCart() {
 
+    const cart = JSON.stringify(cartItems);
+    localStorage.setItem('cartItems' , cart);   
+    window.location = 'cart.html';
+}
 
 
 

@@ -8,6 +8,7 @@ const cartItems = JSON.parse(data);
 
 
 const cart = document.querySelector('#cart-items');
+const bill = document.querySelector('#bill');
 
 
 function renderCart() {
@@ -27,8 +28,8 @@ function renderCart() {
                 <button class="qt-btn" onclick="deleteitem(${i})"> Delete </button>
             </div>
             `)
-            
-        }
+
+    }
 }
 
 renderCart()
@@ -47,6 +48,13 @@ function decreaseQuantity(index) {
 
     cart.innerHTML = ''
     renderCart()
+
+    if (cartItems[index].quantity === 0) {
+        cartItems.splice(index, 1);
+
+        cart.innerHTML = ''
+        renderCart()
+    }
 }
 
 
@@ -56,9 +64,6 @@ function deleteitem(index) {
     cart.innerHTML = ''
     renderCart()
 }
-
-
-
 
 
 

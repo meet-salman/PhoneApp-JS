@@ -10,12 +10,76 @@
 
 <body>
 
-    <div class="sec-padd mb-2">
+    
+       <!-- NAVBAR STARTS -->
 
+       <nav id="navbar">
+
+        <div id="nav-p1" class="d-flex  justify-between">
+
+            <div>
+                <p>Welcome to Gadget Wala!</p>
+            </div>
+
+            <div>
+                <button>Login <i class="fa-solid fa-circle-user"></i></button>
+                &nbsp; &nbsp;
+                <button>Register <i class="fa-solid fa-right-to-bracket"></i></button>
+                &nbsp; &nbsp;
+            </div>
+
+        </div>
+
+
+
+        <div id="nav-p2" class="d-flex   justify-between">
+
+            <div id="logo">
+                <img src="./assets/Logo.png" alt="Logo">
+            </div>
+
+            <div id="nav-menu">
+                <ul class="d-flex  gap-3">
+                    <a onclick="goToHome()">
+                        <li>Home</li>
+                    </a>
+                    <a href="">
+                        <li>Products</li>
+                    </a>
+                    <a href="">
+                        <li>Blog</li>
+                    </a>
+                    <a href="">
+                        <li>About Us</li>
+                    </a>
+                    <a href="">
+                        <li>Contact Us</li>
+                    </a>
+                    <a href="">
+                        <li><i class="fa-solid fa-heart"></i></li>
+                    </a>
+                    <a onclick="goToCart()">
+                        <li><i class="fa-solid fa-cart-shopping"></i></li>
+                    </a>
+                </ul>
+            </div>
+
+            <div id="search-bar">
+                <input type="text" placeholder="What Are You Looking For?">
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- NAVBAR ENDS -->
+    <!-- ------------------------------------------------------------------------------------------------------------------------- -->
+
+
+    <div class="sec-padd mb-2">
 
         <div class="d-flex justify-between">
             <h1>Cart</h1>
-            <button class="btn" onclick="goToHome()">Go To Home</button>
         </div>
 
 
@@ -38,6 +102,8 @@
 
 
     <script src="cart.js"></script>
+    <script src="https://kit.fontawesome.com/7d6781b227.js" crossorigin="anonymous"></script>
+
 
 </body>
 

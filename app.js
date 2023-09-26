@@ -54,11 +54,10 @@ for (let i = 0; i < phones.length; i++) {
 
     products.innerHTML +=
         (`
-    <div id = "card">
+    <div id = "product-card">
         <img src="${phones[i].img}" alt="${phones[i].brand} ${phones[i].model}" width="156px" height="202px">
         <h4> ${phones[i].name} </h4>
-        <p> RAM: ${phones[i].ram}GB </p>
-        <p> ROM: ${phones[i].rom}GB </p>
+        <p> ${phones[i].price} Rs </p>
         <button class="pd-btn" onclick="addToCart(${i})">Add To Cart &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
     </div>
     `)

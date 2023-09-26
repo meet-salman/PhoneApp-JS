@@ -24,7 +24,7 @@
 
         <!-- NAVBAR STARTS -->
 
-        <nav    id="navbar">
+        <nav id="navbar">
 
             <div id="nav-p1" class="d-flex  justify-between">
 
@@ -51,11 +51,27 @@
 
                 <div id="nav-menu">
                     <ul class="d-flex  gap-3">
-                        <li>Home</li>
-                        <li>Products</li>
-                        <li>Blog</li>
-                        <li>About Us</li>
-                        <li>Contact Us</li>
+                        <a onclick="goToHome()">
+                            <li>Home</li>
+                        </a>
+                        <a href="">
+                            <li>Products</li>
+                        </a>
+                        <a href="">
+                            <li>Blog</li>
+                        </a>
+                        <a href="">
+                            <li>About Us</li>
+                        </a>
+                        <a href="">
+                            <li>Contact Us</li>
+                        </a>
+                        <a href="">
+                            <li><i class="fa-solid fa-heart"></i></li>
+                        </a>
+                        <a onclick="goToCart()">
+                            <li><i class="fa-solid fa-cart-shopping"></i></li>
+                        </a>
                     </ul>
                 </div>
 
@@ -73,7 +89,7 @@
 
         <!-- HERO SEC STARTS -->
 
-        <div    id="hero-sec"  class="full-width">
+        <div id="hero-sec" class="full-width">
 
             <div>
                 <img src="./assets/banner.jpg" alt="">
@@ -87,50 +103,68 @@
 
         <!-- CATEGORY SEC STARTS -->
 
-        <div  id="Category-sec"  class="sec-padd"> 
+        <div id="category-sec" class="sec-padd">
 
             <div>
-                <h1 class="main-heading  text-centre">Populor Categories</h1>
+                <h1 class="main-heading  text-centre  mb-4">Popular Categories</h1>
             </div>
 
 
-            <div    class="d-flex  gap-2">
-
-                <div id="headphones"  class="text-centre  items-centre">
-                    <!-- <img src="./assets/Categoriees/headphones.jpg" alt=""> -->
-                    <h1>Headphones</h1>
+            <div class="d-flex  justify-centre  gap-4">
+                <div id="headphones" class="text-centre">
+                    <i class="fa-solid fa-headphones"></i>
+                    <p class="mt-2">Headphones</p>
                 </div>
 
-                <div id="airpods">
-                    <!-- <img src="./assets/Categoriees/airpods.jpg" alt=""> -->
-                    <h1>Airpods</h1>
+                <div id="airpods" class="text-centre">
+                    <i class="fa-solid fa-headphones"></i>
+                    <p class="mt-2">Airpods</p>
                 </div>
 
-                <div></div>
+                <div id="watches" class="text-centre">
+                    <i class="fa-solid fa-headphones"></i>
+                    <p class="mt-2">Watches</p>
+                </div>
 
+                <div id="chargers" class="text-centre">
+                    <i class="fa-solid fa-bolt"></i>
+                    <p class="mt-2">Chargers</p>
+                </div>
+
+                <div id="speakers" class="text-centre">
+                    <i class="fa-solid fa-headphones"></i>
+                    <p class="mt-2">Speakers</p>
+                </div>
+
+                <div id="microphones" class="text-centre">
+                    <i class="fa-solid fa-microphone"></i>
+                    <p class="mt-2">Microphones</p>
+                </div>
             </div>
-
-
-
-            <div></div>
-
-            <div></div>
-
-
 
         </div>
-
-
-
 
         <!-- CATEGORY SEC ENDS -->
         <!-- ------------------------------------------------------------------------------------------------------------------------- -->
 
 
+        <!-- FEATURED PRODUCTS STARTS -->
+
+        <div id="featured-products" class="sec-padd">
+
+            <div>
+                <h1 class="main-heading  text-centre  mb-4">Our Featured Products</h1>
+            </div>
 
 
+            <div id="products" class="d-flex gap-3 text-centre justify-centre">
 
+            </div>
 
+        </div>
+
+        <!-- FEATURED PRODUCTS ENDS -->
+        <!-- ------------------------------------------------------------------------------------------------------------------------- -->
 
 
 
@@ -148,21 +182,9 @@
 
 
 
-    <!-- 
-
-    <div class="text-centre sec-padd mb-2">
-
-        <div class="d-flex justify-between">
-            <h1>Our Products</h1>
-            <button class="btn"   onclick="goToCart()">Go To Cart</button>
-        </div>
 
 
-        <div id="products" class="d-flex gap justify-centre">
 
-        </div>
-
-    </div> -->
 
 
 

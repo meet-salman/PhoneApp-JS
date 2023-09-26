@@ -64,7 +64,7 @@ body {
 }
 
 .sec-padd {
-    padding: 70px;
+    padding: 50px;
 }
 
 .mt-2 {
@@ -84,17 +84,8 @@ body {
 }
 
 .main-heading {
+    font-size: 2.3rem;
     color: #007997;
-}
-
-h4 {
-    line-height: 2rem;
-    margin-top: 10px;
-}
-
-p {
-    font-size: 0.8rem;
-    line-height: 1rem;
 }
 
 
@@ -126,8 +117,9 @@ p {
     height: 40px;
 }
 
-#nav-menu ul li {
+#nav-menu ul li, a {
     list-style-type: none;
+    text-decoration: none;
     color: #292929;
     cursor: pointer;
     transition: all ease 500ms;
@@ -151,68 +143,38 @@ p {
 }
 
 
+#category-sec{
+    padding-top: 70px;
+}
 
+#headphones i, #airpods i, #watches i, #chargers i, #speakers i, #microphones i{
+    font-size: 2.5rem;
+    transition: all ease 500ms;
+}
+#headphones i:hover, #airpods i:hover, #watches i:hover, #chargers i:hover, #speakers i:hover, #microphones i:hover{
+    color: #008daf;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#headphones, #airpods, #watches, #chargers, #speakers, #microphones{
+    width: 150px;
+    padding: 30px 20px;
+    border: 1px solid gray;
+    transition: all ease 500ms;
+}
+#headphones:hover, #airpods:hover, #watches:hover, #chargers:hover, #speakers:hover, #microphones:hover{
+    border-color: #008daf;
+}
 
 
 
 #products {
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 
-#cart-item {
-    padding: 10px 10px;
-    margin-bottom: 10px;
-    background-color: #dfedff;
-}
-
-#card {
+#product-card {
     padding: 20px;
-    background-color: #dfedfc;
+    background-color: #e3f9ff;
     border-radius: 20px;
-}
-
-.btn {
-    padding: 15px 20px;
-    color: #ffff;
-    cursor: pointer;
-    border: 1px solid #0084ff;
-    background-color: #0084ff;
-    transition: all ease 800ms;
-}
-
-.btn:hover {
-    color: #0084ff;
-    border: 1px solid #0084ff;
-    background-color: transparent;
 }
 
 .pd-btn {
@@ -226,6 +188,12 @@ p {
 
 .pd-btn:hover {
     padding-left: 15px;
+}
+
+#cart-item {
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    background-color: #dfedff;
 }
 
 .qt-btn {

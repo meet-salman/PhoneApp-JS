@@ -90,9 +90,7 @@ window.addEventListener('beforeunload', function () {
 
 
 
-
-
-
+// ==>> GO TO HOME CART UPDATE
 
   function goToHome() {
     const cart = JSON.stringify(cartItems);
@@ -100,12 +98,6 @@ window.addEventListener('beforeunload', function () {
     window.location = 'index.html'
 }
 
-
-// // Listen for the popstate event
-// window.addEventListener('popstate', function() {
-//     // Your code to update local storage goes here
-//     localStorage.setItem('cartItems', JSON.stringify(cartItems));
-//   });
   
 
 

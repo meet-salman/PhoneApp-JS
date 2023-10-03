@@ -50,6 +50,7 @@ const phones = [
 ]
 
 
+
 for (let i = 0; i < phones.length; i++) {
 
     products.innerHTML +=
@@ -65,10 +66,11 @@ for (let i = 0; i < phones.length; i++) {
 
 
 
-const cartItems = [];
+const data = localStorage.getItem('cartItems');
+const cartItems = [...JSON.parse(data)];
+
 
 function addToCart(index) {
-
 
     if (cartItems.includes(phones[index])) {
 
@@ -84,7 +86,7 @@ function addToCart(index) {
             title: 'Item Quantity Added',
             showConfirmButton: false,
             timer: 1500
-          })
+        })
 
     }
     else {
@@ -97,7 +99,7 @@ function addToCart(index) {
             title: 'Item Added To Cart',
             showConfirmButton: false,
             timer: 1500
-          })
+        })
     }
 
     console.log(cartItems);
@@ -107,7 +109,7 @@ function addToCart(index) {
 function goToCart() {
 
     const cart = JSON.stringify(cartItems);
-    localStorage.setItem('cartItems' , cart);   
+    localStorage.setItem('cartItems', cart);
     window.location = 'cart.html';
 }
 

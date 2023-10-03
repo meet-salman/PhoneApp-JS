@@ -57,7 +57,7 @@ for (let i = 0; i < phones.length; i++) {
         (`
     <div id = "product-card">
         <img src="${phones[i].img}" alt="${phones[i].brand} ${phones[i].model}" width="156px" height="202px">
-        <h4> ${phones[i].name} </h4>
+        <h4 class="mt-2"> ${phones[i].name} </h4>
         <p> ${phones[i].price} Rs </p>
         <button class="pd-btn" onclick="addToCart(${i})">Add To Cart &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
     </div>

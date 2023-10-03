@@ -180,7 +180,8 @@ body {
 
 #product-card {
     padding: 20px;
-    background-color: #e3f9ff;
+    /* background-color: #e3f9ff; */
+    box-shadow: 5px 5px 25px #d3d3d3;
     border-radius: 20px;
 }
 

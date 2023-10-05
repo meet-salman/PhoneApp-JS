@@ -67,12 +67,25 @@ for (let i = 0; i < phones.length; i++) {
 
 
 const data = localStorage.getItem('cartItems');
-const cartItems = [...JSON.parse(data)];
+const jsonData = JSON.parse(data);
 
+let cartItems;
+
+if (Array.isArray(jsonData)) {
+    cartItems = [...jsonData];
+    //console.log("if chl gya");
+} else {
+    cartItems = [];
+    //console.log("Esle chl gya");
+}
+
+console.log(cartItems);
 
 function addToCart(index) {
 
     if (cartItems.includes(phones[index])) {
+
+        console.log("if chla");
 
         for (let i = 0; i < cartItems.length; i++) {
             if (cartItems[i] === phones[index]) {
@@ -87,11 +100,12 @@ function addToCart(index) {
             showConfirmButton: false,
             timer: 1500
         })
-
     }
     else {
         console.log("Nahi hey");
         cartItems.push(phones[index]);
+
+        console.log("Else chla");
 
         Swal.fire({
             position: 'top-end',
@@ -102,7 +116,7 @@ function addToCart(index) {
         })
     }
 
-    console.log(cartItems);
+    //console.log(cartItems);
 }
 
 
@@ -112,11 +126,6 @@ function goToCart() {
     localStorage.setItem('cartItems', cart);
     window.location = 'cart.html';
 }
-
-
-
-
-
 
 
 

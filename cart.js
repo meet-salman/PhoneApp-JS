@@ -1,5 +1,5 @@
 const data = localStorage.getItem('cartItems');
-const cartItems = JSON.parse(data);
+let cartItems = JSON.parse(data);
 
 
 const cart = document.querySelector('#cart-items');
@@ -94,11 +94,11 @@ window.addEventListener('beforeunload', function () {
 
   function goToHome() {
     const cart = JSON.stringify(cartItems);
-    localStorage.setItem('cartItems' , cart);   
+    localStorage.setItem('cartItems' , cart);
     window.location = 'index.html'
 }
 
-  
+
 
 
 
